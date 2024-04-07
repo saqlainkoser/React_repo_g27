@@ -29,7 +29,7 @@ export default function Password_generator() {
         // setLength()
     }
   
-    useEffect(generate,[numAllowed,symbolAllowed])
+    useEffect(generate,[numAllowed,symbolAllowed,length])
 
   return (
     <div>
@@ -53,7 +53,7 @@ export default function Password_generator() {
               </div>
 
             {/* Slider */}
-              <input className="mx-4 my-5" type="range" min="0" max="14"  name="" id="" />
+              <input className="mx-4 my-5" type="range" min="0" max="14" value={length} onChange={(e)=>{setLength(e.target.value)}}  name="" id="" />
 
             {/* letters */}
               <div className='flex flex-row align-middle justify-start gap-5'>
